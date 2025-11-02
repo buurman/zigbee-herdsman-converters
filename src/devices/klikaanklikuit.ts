@@ -16,4 +16,11 @@ export const definitions: DefinitionWithExtend[] = [
         description: "Zigbee switch module",
         extend: [m.onOff()],
     },
+    {
+        zigbeeModel: ['ZSDR-850'],
+        model: "ZSDR-850",
+        vendor: "KlikAanKlikUit",
+        description: 'Smoke detector',
+        extend: [m.battery(), m.iasZoneAlarm({"zoneType":"generic","zoneAttributes":["alarm_1","alarm_2","tamper","battery_low"]}), m.iasWarning()],
+    },
 ];
